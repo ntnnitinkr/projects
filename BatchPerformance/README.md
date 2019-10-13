@@ -25,15 +25,15 @@
 
 ## Summary Tab:
 <p align="center">
-  <img src="/images/Summary.png" width="950" title="Summary Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/BatchPerformance/images/Summary.png" width="950" title="Summary Tab">
 </p>
 
 ## History Tab:
 <p align="center">
-  <img src="/images/History.png" width="950" title="History Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/BatchPerformance/images/History.png" width="950" title="History Tab">
 </p>
 
 ## Prediction Tab:
 <p align="center">
-  <img src="/images/Prediction.png" width="950" title="Prediction Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/BatchPerformance/images/Prediction.png" width="950" title="Prediction Tab">
 </p>
