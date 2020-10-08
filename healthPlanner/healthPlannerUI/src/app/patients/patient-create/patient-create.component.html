@@ -1,0 +1,319 @@
+<section fxLayout="row wrap" fxLayoutAlign="center">
+  <div style="align-items: center;align-content: center;">
+  <mat-card  fxFlex="100%" fxFlex.xs="100%" style="border: 1; background-color: darkcyan; padding-right: 4cm;">
+
+    <mat-card-title style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: ghostwhite;"
+      fxLayoutAlign="center center">Patient Registration</mat-card-title>
+    <mat-card-title
+      style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter; font-size: small;color: ghostwhite;"
+      fxLayoutAlign="center center">Create your account. It's free and only takes a moment!</mat-card-title>
+    <form [formGroup]="registerForm" autocomplete="off" style="margin-left: 1.1in;" novalidate
+      (ngSubmit)="register(registerForm.value)">
+
+      <mat-card-content fxLayout="column wrap">
+        <mat-accordion style="background-color: lightcyan ;color:darkslategray">
+          <mat-expansion-panel  style="background-color: rgb(200, 228, 228);color: darkslategray;">
+            <mat-expansion-panel-header style="background-color: cadetblue ;border-block-end-style: groove;border-color: green;">
+              <mat-panel-title style="color:ghostwhite;">
+                <b>Personal Details</b>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+            <div><br></div>
+         
+          <div flex fxLayoutGap="30px" >
+            <mat-label><b><span class="star">*</span>Patient Name</b></mat-label><br>
+            <mat-form-field style="width: 44%;">
+              <input matInput type="text" placeholder="FirstName" formControlName="firstName" id="firstName">
+              <mat-hint align="left" class="mat-hint-style">Not more then 50 characters long.</mat-hint>
+              <mat-error *ngIf="hasError('firstName', 'required')">Name is required</mat-error>
+              <mat-error *ngIf="hasError('firstName', 'maxlength')">You have more than 50 characters</mat-error>
+            </mat-form-field>
+            <mat-form-field style="width: 44%;">
+              <input matInput type="text" placeholder="LastName" formControlName="lastName" id="lastName">
+              <mat-hint align="left" class="mat-hint-style">Not more then 50 characters long.</mat-hint>
+              <mat-error *ngIf="hasError('lastName', 'required')">Last Name is required</mat-error>
+              <mat-error *ngIf="hasError('lastName', 'maxlength')">You have more than 50 characters</mat-error>
+            </mat-form-field>
+          </div>
+          <div flex fxLayoutGap="88px">
+            <br>
+            <mat-label><b><span class="star">*</span>Gender</b></mat-label>
+            <mat-radio-group formControlName="gender" id="gender">
+              <mat-radio-button *ngFor="let item of genders" [value]="item.value">
+                {{item.option}}
+                &nbsp;
+              </mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <!--<mat-hint align="left" class="mat-hint-style">Gender is required</mat-hint>-->
+          </div>
+          <div>
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker"  [max]="tomorrow" placeholder="Select Date of Birth"
+                formControlName="dateOfBirth" id="dateOfBirth" readonly (click)="picker.open()">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-hint align="left">Date of Birth is required</mat-hint>
+            </mat-form-field>
+          </div>
+         
+          <div flex fxLayoutGap="30px">
+            <mat-form-field style="width: 44%;">
+              <input matInput type="text" placeholder="Email" formControlName="mailId" id="mailId">
+              <mat-hint align="left" class="mat-hint-style">Not more then 50 characters long.</mat-hint>
+              <mat-error *ngIf="hasError('mailId', 'required')">Mailid is required</mat-error>
+              <mat-error *ngIf="hasError('mailId', 'maxlength')">You have more than 50 characters</mat-error>
+              <mat-error *ngIf="hasError('mailId', 'email')">Invalid email address</mat-error>
+            </mat-form-field>
+            <mat-form-field style="width: 44%;">
+              <input matInput type="text" placeholder="PhoneNo" formControlName="phone" id="phone">
+              <mat-hint align="left" class="mat-hint-style">Not more then 10 characters long.</mat-hint>
+              <mat-error *ngIf="hasError('phone', 'required')">Phone Number is required</mat-error>
+              <mat-error *ngIf="hasError('phone', 'maxlength')">You have more than 10 characters</mat-error>
+              <mat-error *ngIf="hasError('phone', 'pattern')">Phone Number should be number</mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div flex fxLayoutGap="45px"><br>
+            <mat-label><b><span class="star">*</span>Marital Status</b></mat-label>
+            <mat-radio-group formControlName="maritalStatus" id="maritalStatus">
+              <mat-radio-button *ngFor="let item of marital_status" [value]="item.value">
+                {{item.option}}
+                &nbsp;
+              </mat-radio-button>
+            </mat-radio-group>
+            <br> <div><br></div>
+            <!--<mat-hint align="left" class="mat-hint-style">Marital Status is required</mat-hint>-->
+          </div>
+       
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div><br></div>
+      <mat-accordion style="background-color: lightcyan ;color:darkslategray">
+        <mat-expansion-panel   style="background-color: rgb(200, 228, 228);color: darkslategray;">
+          <mat-expansion-panel-header style="background-color: cadetblue;border-block-end-style: groove;border-color: green;">
+            <mat-panel-title style="color: ghostwhite;">
+              <b>Postal Address</b>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div><br></div>
+        
+        <div flex fxLayoutGap="30px">
+         
+          <!--<mat-label><b>Postal Address</b></mat-label><br>-->
+          <div class="mat-form-field--inline">
+            <mat-form-field>
+              <input matInput type="text" placeholder="Line1" formControlName="line1" id="line1">
+              <mat-hint align="left" class="mat-hint-style">Not more then 150 characters long.</mat-hint>
+              <mat-error *ngIf="hasError('line1', 'required')">Address Line 1 is required</mat-error>
+              <mat-error *ngIf="hasError('line1', 'maxlength')">You have more than 150 characters</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="text" placeholder="Line2" formControlName="line2" id="line2">
+              <mat-hint align="left" class="mat-hint-style">Not more then 150 characters long.</mat-hint>
+              <mat-error *ngIf="hasError('line2', 'maxlength')">You have more than 150 characters</mat-error>
+            </mat-form-field>
+          </div>
+          <br>
+          <div class="mat-form-field--inline">
+            <mat-form-field>
+              <input [matAutocomplete] = "auto1" [formControl]="city" matInput type="text" placeholder="City"  id="city">
+              <mat-autocomplete #auto1 = "matAutocomplete">
+                <mat-option *ngFor = "let city of filteredCities | async" [value] = "city.value">
+                   {{city.display}}
+                </mat-option>
+             </mat-autocomplete>
+              <mat-hint align="left" class="mat-hint-style">Not more then 50 characters long.</mat-hint>
+              <mat-error *ngIf="hasError('city', 'required')">City is required</mat-error>
+              <mat-error *ngIf="hasError('city', 'maxlength')">You have more than 50 characters</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input [matAutocomplete] = "auto" [formControl]="state" matInput type="text" placeholder="State"  id="state">
+              <mat-autocomplete #auto = "matAutocomplete">
+                <mat-option *ngFor = "let state of filteredStates | async" [value] = "state.value">
+                   {{state.display}}
+                </mat-option>
+             </mat-autocomplete>
+              <mat-hint align="left" class="mat-hint-style">Not more then 50 characters long.</mat-hint>
+              <mat-error *ngIf="hasError('state', 'required')">State is required</mat-error>
+              <mat-error *ngIf="hasError('state', 'maxlength')">You have more than 50 characters</mat-error>
+            </mat-form-field>
+          </div>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Zip" formControlName="zip" id="zip">
+            <mat-hint align="left" class="mat-hint-style">Not more then 6 characters long.</mat-hint>
+            <mat-error *ngIf="hasError('zip', 'required')">Zip is required</mat-error>
+            <mat-error *ngIf="hasError('zip', 'maxlength')">You have more than 6 characters</mat-error>
+            <mat-error *ngIf="hasError('zip', 'pattern')">Zip should be number</mat-error>
+          </mat-form-field>
+          &nbsp;
+          <br>
+          <div>
+            <br>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+        <br> &nbsp;
+
+        <mat-accordion style="background-color: lightcyan ;color:darkslategray">
+          <mat-expansion-panel  style="background-color: rgb(200, 228, 228);color: darkslategray;">
+            <mat-expansion-panel-header style="background-color: cadetblue ;border-block-end-style: groove;border-color: green;">
+              <mat-panel-title style="color:ghostwhite;">
+                <b>Medical History</b>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+            <div><br></div> 
+         
+          <mat-label><b><span class="star">*</span>Medical History</b></mat-label>
+         
+          <ng-container *ngFor="let item of disease_type; let i = index">
+            <mat-checkbox class="tp-section" style="padding-right: 0.65cm;" (change)="onChange1($event)" [value]="item.name">
+              {{item.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </mat-checkbox>
+          </ng-container>
+          <br>
+          <!--<mat-hint align="left" class="mat-hint-style">Medical History is required</mat-hint>-->
+        
+      </mat-expansion-panel>
+    </mat-accordion>
+        <br>
+        &nbsp;
+        <mat-accordion style="background-color: lightcyan ;color:darkslategray">
+          <mat-expansion-panel  style="background-color: rgb(200, 228, 228);color: darkslategray;">
+            <mat-expansion-panel-header style="background-color: cadetblue;border-block-end-style: groove;border-color: green;">
+              <mat-panel-title style="color:ghostwhite;">
+                <b>Activities, Habbits and Known Allergies</b>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+           
+            
+          <div flex fxLayoutGap="25px"><br>
+            <mat-label><b><span class="star">*</span>Exercise Activity</b></mat-label>
+            <mat-radio-group formControlName="activity" id="activity">
+              <mat-radio-button *ngFor="let item of excercise_type" [value]="item.value">
+                {{item.option}}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <!--mat-hint align="left" class="mat-hint-style">Exercise Activity is required</mat-hint>-->
+          </div>
+         
+          <div flex fxLayoutGap="59px"><br>
+            <mat-label><b><span class="star">*</span>Tobaco Use</b></mat-label>
+            <mat-radio-group formControlName="tobacoUse" id="tobacoUse">
+              <mat-radio-button *ngFor="let item of tobaco_use_type" [value]="item.value">
+                {{item.option}}
+                &nbsp;
+              </mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <!--<mat-hint align="left" class="mat-hint-style">Tobaco Use is required</mat-hint>-->
+          </div>
+         
+          <div flex fxLayoutGap="57px"><br>
+            <mat-label><b><span class="star">*</span>Aclohol Use</b></mat-label>
+            <mat-radio-group formControlName="alchoholUse" id="alchoholUse">
+              <mat-radio-button *ngFor="let item of alchohol_use_type" [value]="item.value">
+                {{item.option}}
+                &nbsp;
+              </mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <!--<mat-hint align="left" class="mat-hint-style">Aclohol Use is required</mat-hint>-->
+          </div>
+          
+          <div flex fxLayoutGap="54px"><br>
+            <mat-label><b><span class="star">*</span>Caffeine Use</b></mat-label>
+            <mat-radio-group formControlName="caffineUse" id="caffineUse">
+              <mat-radio-button *ngFor="let item of caffine_use_type" [value]="item.value">
+                {{item.option}}
+                &nbsp;
+              </mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <!--<mat-hint align="left" class="mat-hint-style">Caffeine Use is required</mat-hint>-->
+          </div>
+          
+          <div flex fxLayoutGap="88px"><br>
+            <mat-label><b>Do you suffer from any known allergies</b></mat-label>
+            <mat-radio-group formControlName="allergies" id="allergies">
+              <mat-radio-button *ngFor="let item of alergy_yes_no" [value]="item.value"
+                (change)="showAlergyList($event)">
+                {{item.option}}
+                &nbsp; &nbsp;
+              </mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <mat-hint align="left" class="mat-hint-style">Please select suffering from allergies</mat-hint>
+          </div>
+          
+          <div flex fxLayoutGap="40px" *ngIf="suffering == true"><br>
+            <mat-label><b><span class="star">*</span>Allergy Causes</b></mat-label>
+            <ng-container *ngFor="let item of alergy_type; let i = index">
+              <mat-checkbox (change)="onChange2($event)" [value]="item.name">{{item.name}}
+              </mat-checkbox>
+            </ng-container>
+            <br>
+            <!--<mat-hint align="left" class="mat-hint-style">Causes of allergic is required</mat-hint>-->
+          </div>
+          <br *ngIf="suffering == true">
+          <div flex fxLayoutGap="115px"><br>
+            <mat-label><b><span class="star">*</span>Diet</b></mat-label>
+            <mat-radio-group formControlName="diet" id="diet">
+              <mat-radio-button *ngFor="let item of diet_type" [value]="item.value">
+                {{item.option}}
+                &nbsp;
+              </mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <!--<mat-hint align="left" class="mat-hint-style">Diet is required</mat-hint>-->
+          </div>
+           
+        </mat-expansion-panel>
+      </mat-accordion>
+        <br>
+        &nbsp;
+        <mat-accordion style="background-color: lightcyan ;color:darkslategray">
+          <mat-expansion-panel  style="background-color: rgb(200, 228, 228);color: darkslategray;">
+           <mat-expansion-panel-header style="background-color: cadetblue;border-block-end-style: groove;border-color: green;">
+             <mat-panel-title style="color:ghostwhite;">
+               <b>Physical Details</b>
+             </mat-panel-title>
+           </mat-expansion-panel-header> 
+          
+        <div flex fxLayoutGap="30px" ><br>
+          <mat-label><b>Patient Height & Weight</b></mat-label><br>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Height in METER" formControlName="height" id="height">
+            <mat-hint align="left" class="mat-hint-style">Not more then 10 characters long.</mat-hint>
+            <mat-error *ngIf="hasError('height', 'required')">Height is required</mat-error>
+            <mat-error *ngIf="hasError('height', 'maxlength')">You have more than 10 characters</mat-error>
+            <mat-error *ngIf="hasError('height', 'pattern')">Height should be number</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Weight in KG" formControlName="weight" id="weight">
+            <mat-hint align="left" class="mat-hint-style">Not more then 10 characters long.</mat-hint>
+            <mat-error *ngIf="hasError('weight', 'required')">Weight is required</mat-error>
+            <mat-error *ngIf="hasError('weight', 'maxlength')">You have more than 10 characters</mat-error>
+            <mat-error *ngIf="hasError('weight', 'pattern')">Weight should be number</mat-error>
+          </mat-form-field>
+        </div> 
+      </mat-expansion-panel>
+    </mat-accordion> 
+    </mat-card-content>
+
+      <mat-card-actions style="text-align: center;">
+        <button mat-raised-button class="app_button_action " [disabled]="!registerForm.valid"><b>Register</b></button>
+        <button type="button" mat-raised-button class="app_button_action " (click)="onCancel()"><b>Cancel</b></button>
+        
+      </mat-card-actions>
+
+    </form>
+    <div style=" padding-left: 12cm;">
+    <button mat-raised-button class="app_button_action" routerLink="/image/data"><b>Diagnosis</b></button>
+   </div>
+  </mat-card>
+</div>
+</section>

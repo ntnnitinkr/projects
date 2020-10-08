@@ -1,0 +1,259 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center" >
+  <mat-card fxFlex="87%" fxFlex.xs="100%" style="border: 1;background-color: darkslategray">
+
+    <mat-card-title fxLayoutAlign="center center" style="color: ghostwhite;"><b>Registered Patient Details</b></mat-card-title>
+
+    <form [formGroup]="registerForm" autocomplete="off" novalidate style="color: white;" >
+
+      <mat-card-content fxLayout="column wrap" >
+
+        <mat-accordion>
+          <mat-expansion-panel  style="background-color: rgb(200, 228, 228);color: black;">
+            <mat-expansion-panel-header style="background-color: cadetblue ;border-block-end-style: groove;border-color: green;">
+              <mat-panel-title style="color:ghostwhite;">
+                <b>Personal Details</b>
+              </mat-panel-title>
+            </mat-expansion-panel-header>  
+          
+            <div><br></div>
+            <div flex fxLayoutGap="30px">
+         
+          <mat-label style="font-size: 0.38cm;" ><b>Patient Name</b></mat-label><br>
+          <mat-label><b>First</b>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </mat-label> 
+          <mat-form-field style="width: 8cm;">
+            <input matInput  type="text"   formControlName="firstName" id="firstName">
+          </mat-form-field>
+          <mat-label><b>Last</b></mat-label>&nbsp;
+          <mat-form-field style="width: 8cm;">
+             <input matInput type="text"   formControlName="lastName" id="lastName">
+          </mat-form-field>
+        </div>
+        <br>
+        <div flex fxLayoutGap="30px">
+          <mat-label><b>Gender</b></mat-label>  &nbsp; &nbsp;
+          <mat-radio-group formControlName="gender" id="gender" > 
+            <mat-radio-button  *ngFor="let item of genders" [checked]="item.checked" [value]="item.value">
+              {{item.option}}
+              &nbsp;
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+        <div flex fxLayoutGap="1px" >
+          <mat-label><b>Date Of Birth</b></mat-label>
+        &nbsp;
+          <mat-form-field style="width: 8cm;">
+            <input matInput type="text"  formControlName="dateOfBirth" id="dateOfBirth">
+          </mat-form-field>
+         
+        </div>
+        <div flex fxLayoutGap="1px">
+          <mat-label><b>Email</b> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</mat-label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+          <mat-form-field style="width: 8cm;"> 
+            <input matInput type="text"  formControlName="mailId" id="mailId">
+          </mat-form-field> &nbsp;&nbsp;&nbsp;
+           <mat-label><b>&nbsp;&nbsp;Marital Status</b></mat-label>
+          <mat-radio-group formControlName="maritalStatus" id="maritalStatus">
+            <mat-radio-button *ngFor="let item of marital_status" [checked]="item.checked" [value]="item.value">
+              {{item.option}}
+              &nbsp;
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div flex fxLayoutGap="30px">
+          <mat-label><b>Phone&nbsp;&nbsp;&nbsp;</b></mat-label>&nbsp;&nbsp;
+          <mat-form-field style="width: 8cm;"> 
+            <input matInput type="text"  formControlName="phone" id="phone">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+        <br>
+        <br>
+      
+        <div>
+          <br>
+        </div>
+        <mat-accordion>
+          <mat-expansion-panel   style="background-color: rgb(200, 228, 228);color: black;">
+            <mat-expansion-panel-header style="background-color: cadetblue;border-block-end-style: groove;border-color: green;">
+              <mat-panel-title style="color: ghostwhite;">
+                <b>Postal Address</b>
+              </mat-panel-title>
+            </mat-expansion-panel-header>  
+        <div flex fxLayoutGap="30px" style="color: black;">
+          <div>
+          <mat-label style="color: black;"><b>Line 1</b></mat-label> &nbsp;
+          <mat-form-field style="width: 8cm;">
+            <input matInput type="text"   formControlName="line1" id="line1">
+          </mat-form-field> &nbsp;
+          <mat-label style="color: black;"><b>Line 2 </b></mat-label> &nbsp;
+          <mat-form-field style="width: 8cm;">
+            <input matInput type="text"  formControlName="line2" id="line2">
+          </mat-form-field>
+        </div>
+          
+          <div>
+          <mat-label style="color: black;"><b>City</b></mat-label> &nbsp; &nbsp;&nbsp;
+          <mat-form-field style="width: 8cm;">
+            <input matInput type="text"   formControlName="city" id="city">
+          </mat-form-field> &nbsp;&nbsp;
+          <mat-label style="color: black;"><b>State</b></mat-label> &nbsp;
+          <mat-form-field style="width: 8cm;">
+            <input matInput type="text"   formControlName="state" id="state">
+          </mat-form-field>
+        </div>
+        <mat-label style="color: black;"><b>Zip</b></mat-label> 
+          <mat-form-field style="width: 8cm;">
+            <input matInput type="text"   formControlName="zip" id="zip">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+       
+        <br>
+        <div>
+          <br>
+        </div>
+    
+        <div><br></div>
+        <mat-accordion>
+          <mat-expansion-panel  style="background-color: rgb(200, 228, 228);color: black;">
+            <mat-expansion-panel-header style="background-color: cadetblue ;border-block-end-style: groove;border-color: green;">
+              <mat-panel-title style="color:ghostwhite;">
+                <b>Medical History</b>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+            <div><br></div>
+        <div flex fxLayoutGap="30px">
+          <mat-label><b>Medical History</b></mat-label>
+          <ng-container *ngFor="let item of disease_type; let i = index">
+            <mat-checkbox class="tp-section"  [checked]="item.checked" [value]="item.name" disabled="true">{{item.name}}
+            </mat-checkbox>
+          </ng-container>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+        <div><br></div>
+        <br>  <br>
+        <mat-accordion>
+          <mat-expansion-panel  style="background-color: rgb(200, 228, 228);color: black;">
+            <mat-expansion-panel-header style="background-color: cadetblue;border-block-end-style: groove;border-color: green;">
+              <mat-panel-title style="color:ghostwhite;">
+                <b>Activities, Habbits and Known Allergies</b>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+        <br>
+        <div flex fxLayoutGap="30px">
+          <mat-label><b>Exercise Activity </b></mat-label>&nbsp;
+          <mat-radio-group formControlName="activity" id="activity">
+            <mat-radio-button *ngFor="let item of excercise_type" [checked]="item.checked"  [value]="item.value">
+              {{item.option}}
+              &nbsp;
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+        <div flex fxLayoutGap="56px">
+          <mat-label><b>Tobaco Use &nbsp;</b></mat-label> &nbsp;
+          <mat-radio-group formControlName="tobacoUse" id="tobacoUse">
+            <mat-radio-button *ngFor="let item of tobaco_use_type" [checked]="item.checked" [value]="item.value">
+              {{item.option}}
+              &nbsp;
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+        <div flex fxLayoutGap="56px">
+          <mat-label><b>Aclohol Use </b></mat-label>&nbsp;&nbsp;
+          <mat-radio-group formControlName="alchoholUse" id="alchoholUse">
+            <mat-radio-button *ngFor="let item of alchohol_use_type" [checked]="item.checked" [value]="item.value">
+              {{item.option}}
+              &nbsp;
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+        <div flex fxLayoutGap="50px">
+          <mat-label><b>Caffeine Use</b></mat-label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-group formControlName="caffineUse" id="caffineUse">
+            <mat-radio-button *ngFor="let item of caffine_use_type" [checked]="item.checked" [value]="item.value">
+              {{item.option}}
+              &nbsp;
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+        <div flex fxLayoutGap="30px">
+          <mat-label><b>Any  known  Allergies&nbsp;&nbsp;</b></mat-label>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-group formControlName="allergies" id="allergies">
+            <mat-radio-button *ngFor="let item of alergy_yes_no" [checked]="item.checked" [value]="item.value">
+              {{item.option}}
+              &nbsp; &nbsp;
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+        <div flex fxLayoutGap="30px" *ngIf="suffering == true">
+          <mat-label><b>Causes of allergic</b></mat-label>
+          <ng-container *ngFor="let item of alergy_type; let i = index">
+            <mat-checkbox [checked]="item.checked" [value]="item.name" disabled="true">{{item.name}}
+            </mat-checkbox>
+          </ng-container>
+        </div>
+        <br *ngIf="suffering == true">
+        <div flex fxLayoutGap="30px">
+          <mat-label><b>Diet</b></mat-label>
+          <mat-radio-group formControlName="diet" id="diet">
+            <mat-radio-button *ngFor="let item of diet_type" [checked]="item.checked" [value]="item.value">
+              {{item.option}}
+              &nbsp;
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+        <br>
+        <div><br></div>
+        <mat-accordion>
+          <mat-expansion-panel  style="background-color: rgb(200, 228, 228);color: black;">
+            <mat-expansion-panel-header style="background-color: cadetblue;border-block-end-style: groove;border-color: green;">
+              <mat-panel-title style="color:ghostwhite;">
+                <b>Physical Details</b>
+              </mat-panel-title>
+            </mat-expansion-panel-header>  
+        <div><br></div>
+        <div flex fxLayoutGap="30px">
+          <mat-label><b>Patient Height & Weight</b></mat-label><br>
+          <mat-form-field>
+            <input matInput type="text"  formControlName="height" id="height">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text"  formControlName="weight" id="weight">
+          </mat-form-field>
+        </div>
+        <div flex fxLayoutGap="30px">
+          <mat-label style="text-decoration: underline;text-decoration-color: blueviolet;text-shadow: blueviolet;"><b>Body Mass Index (BMI)</b></mat-label><br>
+          <mat-form-field >
+            <input matInput type="text"  formControlName="bmi" id="bmi">
+          </mat-form-field>
+        </div>
+        <div flex fxLayoutGap="30px">
+          <mat-label style="text-decoration: underline;text-decoration-color: blueviolet;text-shadow: blueviolet;"><b>Health Status</b></mat-label><br>
+          <mat-form-field>
+            <input  matInput type="text"  formControlName="category" id="category">
+          </mat-form-field>
+        </div>
+        </mat-expansion-panel>
+</mat-accordion>
+      </mat-card-content>
+
+     <!-- <mat-card-actions style="text-align: center;">
+        <button type="button" mat-raised-button style="background-color: #F0C300" (click)="onCancel()"><b>Back</b></button>
+      </mat-card-actions>-->
+
+    </form>
+
+  </mat-card>
+</section>

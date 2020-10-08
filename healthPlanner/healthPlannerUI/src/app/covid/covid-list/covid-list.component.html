@@ -1,0 +1,47 @@
+<div fxLayout fxLayout.lt-md="column wrap" fxLayoutAlign="center center" fxLayoutGap.gt-sm="250px"
+    fxLayoutGap.lt.md="20px">
+    <mat-form-field>
+        <input matInput type="text" (keyup)="applyFilter($event.target.value)" placeholder="Filter Record">
+    </mat-form-field>
+</div>
+
+<table mat-table [dataSource]="dataSource" matSort>
+    <!--ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header width="150px">ID</th>
+        <td mat-cell *matCellDef="let patient">{{patient.id }}</td>
+    </ng-container-->
+    <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header   width="150px" bgcolor="lightgrey" style="color:rgb(1, 104, 104);font-size: small;"><b>Country</b></th>
+        <td mat-cell *matCellDef="let covid" style="color:darkcyan;" >{{covid.country}}</td>
+    </ng-container>
+    <ng-container matColumnDef="cases">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header   width="150px" bgcolor="lightgrey" style="color:rgb(1, 104, 104);font-size: small;"><b>Number of Cases</b></th>
+        <td mat-cell *matCellDef="let covid"  style="color:darkcyan;">{{covid.cases}}</td>
+    </ng-container>
+    <ng-container matColumnDef="todayCases">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header width="150px" bgcolor="lightgrey" style="color:rgb(1, 104, 104);font-size: small;"><b>Today's Cases</b></th>
+        <td mat-cell *matCellDef="let covid" style="color:darkcyan;">{{covid.todayCases}}</td>
+    </ng-container>
+    <ng-container matColumnDef="deaths">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header width="150px" bgcolor="lightgrey" style="color:rgb(1, 104, 104);font-size: small;"><b>Number of deaths</b></th>
+        <td mat-cell *matCellDef="let covid" style="color:darkcyan;">{{covid.deaths}}</td>
+    </ng-container>
+    <ng-container matColumnDef="todayDeaths">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header width="150px" bgcolor="lightgrey" style="color:rgb(1, 104, 104);font-size: small;"><b>Today's Deaths</b></th>
+        <td mat-cell *matCellDef="let covid" style="color:darkcyan;">{{covid.todayDeaths}}</td>
+    </ng-container>
+    <ng-container matColumnDef="recovered">
+        <th mat-header-cell *matHeaderCellDef width="150px" bgcolor="lightgrey" style="color:rgb(1, 104, 104);font-size: small;"><b>Recovered Cases</b></th>
+        <td mat-cell *matCellDef="let covid" style="color:darkcyan;">{{covid.recovered}}</td>
+    </ng-container>
+    <ng-container matColumnDef="active">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header width="150px" bgcolor="lightgrey" style="color:rgb(1, 104, 104);font-size: small;"><b>Active Cases</b></th>
+        <td mat-cell *matCellDef="let covid" style="color:darkcyan;">{{covid.active}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; let even = even; columns: displayedColumns;" [ngClass]="{gray: even}"></tr>
+</table>
+
+<mat-paginator #paginator [pageIndex]="pageIndex" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+    (page)="pageChange($event)" showFirstLastButtons></mat-paginator>

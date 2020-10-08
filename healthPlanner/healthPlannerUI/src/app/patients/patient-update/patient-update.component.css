@@ -1,0 +1,28 @@
+mat-form-field {
+  width: 350px;
+}
+
+mat-card-title {
+  text-align: center;
+}
+
+.mat-hint-style {
+  font-size: 75%;
+  font-weight: 400;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.star{
+  color:black;
+  font-size: 150%;
+  }
+
+
+  .tp-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 20px;
+    padding-left: 0.5ch;
+  }

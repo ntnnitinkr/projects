@@ -1,0 +1,27 @@
+<div mat-dialog-container style="margin-bottom: 1cm;padding-bottom: 0.01cm;">
+
+  <h1 mat-dialog-title ali class="task-header">{{title}}</h1>
+
+  <div class="message" style="color:darkcyan;padding-right: 1cm;">
+    <p>{{message}}</p>
+  </div>
+ 
+  <div style="padding:4px;float:right;  border-right: 1mm; border-radius: 0.3cm;">
+    <div *ngIf="button==0">
+      <button mat-button   style="color: white;background-color: darkcyan;height: 25px;line-height: 25px;vertical-align: middle;padding-bottom: 0.1cm;"  (click)="onOk()" tabindex="-1">OK</button>
+    </div>
+    <div *ngIf="button==1">
+      <button mat-button color="darkcyan"  style="border-color: darkcyan;border-style: solid;"  (click)="onOk()" tabindex="-1">OK</button>
+      <button mat-button color="darkcyan" style="border-color: darkcyan;border-style: solid;" (click)="onCancel()" tabindex="-1">Cancel</button>
+    </div>
+    <div *ngIf="button==2">
+      <button mat-button color="darkcyan"  style="height:30px;width:10px;border-color: darkcyan;border-style: solid;margin-right: 10px; height: 30px;line-height: 30px;color: white;background-color: darkcyan;" (click)="onYes()" tabindex="-1">Yes</button>
+      <button mat-button color="darkcyan"   style="border-color: darkcyan;border-style: solid;height: 30px;line-height: 30px;color: white;background-color: darkcyan;" (click)="onNo()" tabindex="-1">No</button>
+    </div>
+    <div *ngIf="button==3">
+      <button mat-button color="darkcyan"  style="border-color: darkcyan;border-style: solid;"  (click)="onAccept()" tabindex="-1">Accept</button>
+      <button mat-button color="darkcyan" style="border-color: darkcyan;border-style: solid;"  (click)="onReject()" tabindex="-1">Reject</button>
+    </div>
+  
+</div>
+</div>

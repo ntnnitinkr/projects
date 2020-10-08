@@ -1,0 +1,12 @@
+<p>dashboard works!</p>
+
+<mat-sidenav-container>
+    <mat-sidenav>
+      <app-dashboard-sidenav></app-dashboard-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+     <app-dashboard-card-spawner *ngFor="let card of cards | async"
+                                 [card]="card">
+     </app-dashboard-card-spawner>  
+    </mat-sidenav-content>
+  </mat-sidenav-container>

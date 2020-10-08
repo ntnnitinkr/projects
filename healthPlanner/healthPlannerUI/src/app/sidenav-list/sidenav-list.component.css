@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+    color: darkcyan;
+    background-color: ghostwhite;
+}
+
+a:hover, a:active{
+    color: darkgray;
+}
+
+.nav-caption{
+    display: inline-block;
+    padding-left: 6px;
+}

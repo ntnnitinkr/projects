@@ -1,0 +1,38 @@
+<div>
+    <h3 style="text-align: center;font-family: Roboto, Helvetica Neue, sans-serif;color: darkcyan;background-color: lightcyan;">Our success is to know even one life has breathed easier because of our efforts. We are here for you.   </h3>
+  </div>
+  <div><br><br></div>
+  <section fxLayout="row wrap" fxLayoutAlign="center center" >
+    <mat-card fxFlex="500px" fxFlex.xs="100%" style="color: darkcyan;  background: rgba(0, 151, 19, 0.1);">
+      
+      <mat-card-title fxLayoutAlign="center center" style="font-size: large;font-family: Roboto, Helvetica Neue, sans-serif;color: darkgreen;"><b>Register below and start your journey towards good health!</b></mat-card-title>
+  
+      <div><br></div>
+      <form  style="color:blue; " [formGroup]="loginForm" autocomplete="off" novalidate (ngSubmit)="login(loginForm.value)" fxLayout="column wrap"
+        fxLayoutAlign="center center" fxLayoutGap="10px">
+  
+        <mat-card-content>
+          <mat-form-field>
+            <input matInput type="text" placeholder="User Name" formControlName="username" id="username">
+            <mat-error *ngIf="hasError('username', 'required')">User Name is required</mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName="password" id="password">
+            <mat-error *ngIf="hasError('password', 'required')">Password is required</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Confirm Password" formControlName="confirmpassword" id="password">
+            <mat-error *ngIf="hasError('password', 'required')">Confirm Password is required</mat-error>
+          </mat-form-field>
+        </mat-card-content>
+        
+        <mat-card-actions style="text-align: center;">
+          <button mat-raised-button class="app_button_action"  [disabled]="!loginForm.valid"><b>Submit</b></button>
+          <button type="button" mat-raised-button class="app_button_action" (click)="onCancel()"><b>Cancel</b></button>
+        </mat-card-actions>
+  
+      </form>
+    
+    </mat-card>
+  </section>

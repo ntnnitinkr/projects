@@ -1,0 +1,22 @@
+<section fxLayout="column" fxFlexAlign="stretch" style="background-color: darkcyan;">
+  <div fxFlexAlign="center" >
+    <p style="font-family: Roboto, Helvetica Neue, sans-serif; color: ghostwhite ; " ><b>Welcome to your Personal Health Planner</b></p>
+    <p style="text-align: center; text-overflow: clip;color: ghostwhite ;" >A step towards your great health!</p>
+  </div>
+
+  <mat-card>
+    <mat-card-title></mat-card-title>
+    <mat-card-content>
+      <p>In this application we are going to Register new patients and view the details of the registered patients.</p>
+      <p>Click on 'Register' to add/create a new Patient. Click on 'Patients' to get the list of available Patients.</p>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="center">
+      <!--<button (mouseenter)="changeText=true" (mouseleave)="changeText=false" mat-raised-button class="app_button_action" routerLink="/user/login"><b>LOGIN</b><br><span style="background-color: darkcyan;color: ghostwhite;" *ngIf="changeText">(In order to use more services please login!!!)</span><span *ngIf="changeText"></span></button>-->
+      <button mat-raised-button class="app_button_action" routerLink="/patient/create"><b>REGISTER</b></button>
+      <button mat-raised-button  *ngIf="securityObject.canAccessPatients" class="app_button_action" routerLink="/patient/patients"><b>PATIENTS</b></button>
+      <button mat-raised-button class="app_button_action" routerLink="/covid/datalist"><b>Covid-19</b></button>
+      <!-- <button mat-raised-button class="app_button_action" routerLink="/dashboard"><b>Dashboard</b></button>-->
+      </mat-card-actions>
+  </mat-card>
+
+</section>

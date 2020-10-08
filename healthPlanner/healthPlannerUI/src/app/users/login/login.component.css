@@ -1,0 +1,19 @@
+mat-form-field{
+    width: 400px;
+}
+
+mat-card-title{
+    text-align: center;
+}
+
+.app_button_action {
+    background-color: lightcyan;
+    border-color: darkgreen;
+    border: 0.05cm;
+    border-width: 0.05cm;
+    border-style: solid;
+    color: darkgreen;
+    font-family: Roboto, Helvetica Neue, sans-serif;
+    opacity: 0.8;
+}
+

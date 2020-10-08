@@ -1,0 +1,133 @@
+<p>dashboard-users works!</p>
+
+
+
+<div id="dashboard">
+    <header class="dashboard__header">
+      <h1>My Dashboard</h1>
+      <div style="font-weight: 300;font-size: 0.9rem;">Showing analytics from {{today}}</div>
+          <!-- <mat-form-field color="primary" style="margin-top: 0.2rem;"> 
+            <input matInput 
+              [matDatepicker]="picker" 
+              placeholder=""
+              color="#FFF"
+              (click)="picker.open()"
+              >
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker panelClass="datepickerTwo"></mat-datepicker>
+          </mat-form-field> -->
+    </header>
+    <section class="dash-row">
+      <mat-card id="welcome-message" style="">
+        <div class="welcome__left">
+          <h2>Welcome back Karen!</h2>
+          <p>
+          We've created a daily analytics report just for you.
+          So far, it looks like traffic has increased <span style="font-weight:600">40%</span> from last week! Keep it up!
+          </p>
+        </div>
+        <div class="welcome__center">
+          <h5>Jan 23 - Jan 29</h5>
+          <div class="spark-container">
+            <zingchart-angular [config]="reachSpark" [height]="'30px'" [width]="'50px'"></zingchart-angular>
+            <div class="spark-stat">+1528 Reach</div>
+          </div>
+          <div class="spark-container">
+                      <zingchart-angular [config]="impressionsSpark" [height]="'30px'" [width]="'50px'"></zingchart-angular>
+  
+            <div class="spark-stat">+608 Impressions</div>
+          </div>
+          <div class="spark-container">
+                      <zingchart-angular [config]="campaignSpark" [height]="'30px'" [width]="'50px'"></zingchart-angular>
+  
+            <div class="spark-stat">-102 Campaign Clicks</div>
+          </div>
+          <div style="margin-top: 1rem"><a href="#">Learn More</a></div>
+        </div>
+        <div class="welcome__right">
+  
+          <img style="height: 180px;" src="https://gistcdn.githack.com/mike-schultz/10a1a059f77cc33a350d85a0870397e2/raw/d11f4b4804d9a49faec957a1d51c3d4e5174477c/data_xmfy.svg"/>
+        </div>
+  
+        </mat-card>
+    </section>
+    <section class="dash-row">
+  
+      <mat-card id="card-0-1" style="color: white">
+        <mat-card-title >
+          Traffic
+        </mat-card-title>
+        <mat-card-subtitle style="color: white">www.yourwebsite.com</mat-card-subtitle>
+        <zingchart-angular #subscribers [config]="websiteTraffic" [height]="'250px'"></zingchart-angular>
+  
+      </mat-card>
+          <mat-card id="card-0-2">
+        <mat-card-title >
+          Budget
+        </mat-card-title>
+        <mat-card-subtitle>Percentage of annual spend</mat-card-subtitle>
+        <zingchart-angular [config]="allocatedBudget" [height]="'250px'"></zingchart-angular>
+  
+      </mat-card>
+          <mat-card id="card-1-1">
+        <mat-card-title style="color: white">
+          Interactions
+        </mat-card-title>
+        <mat-card-subtitle style="color: white">Your customer's interactions</mat-card-subtitle>
+        <zingchart-angular [config]="customerInteractions" [height]="'220px'"></zingchart-angular>
+      </mat-card>
+  
+    </section>
+      <section class="dash-row">
+      <mat-card>
+        <mat-card-title style="margin-bottom: 1rem">
+         <div>Customers</div>
+        </mat-card-title>
+        <section id="customers-card">
+         <zing-grid 
+            template-start-delimiter="$^"
+            template-end-delimiter="^$"
+            pager
+            page-size="3"
+            page-size-options="2,3,6"
+            viewport-stop
+            [data]='customers'>
+             <zg-colgroup>
+              <zg-column index="selector" type="selector"></zg-column>
+              <zg-column index="first_name" header="First Name" ></zg-column>
+              <zg-column index="last_name"></zg-column>
+              <zg-column index="email"></zg-column>
+              <zg-column index="company"></zg-column>
+            </zg-colgroup>
+          </zing-grid>
+          <div>
+        
+          </div>
+        </section>
+      </mat-card>
+  
+    </section>
+      <section class="dash-row">
+      <mat-card>
+        <mat-card-title>
+          Downloads
+        </mat-card-title>
+        <mat-card-subtitle >Bandwidth of consumed content</mat-card-subtitle>
+        <mat-card-content>
+          <zingchart-angular [config]="mediaConsumption" [height]="'250px'"></zingchart-angular>
+        </mat-card-content>
+      </mat-card>
+        <mat-card>
+        <mat-card-title>
+          Social Media
+        </mat-card-title>
+        <mat-card-subtitle>Engagement by Platform</mat-card-subtitle>
+        <mat-card-content>
+          <zingchart-angular [config]="enagementPlatforms" [height]="'250px'"></zingchart-angular>
+        </mat-card-content>
+      </mat-card>  </section>
+    
+  
+  </div>
+  
+  

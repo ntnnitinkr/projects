@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="navbar" style="background-color: rgb(2, 134, 134); background-blend-mode: darken;">
+    <mat-toolbar-row >
+        <button mat-icon-button (click)="onToggleSidenav()" *ngIf="logedUser != null">
+            <mat-icon>menu</mat-icon>
+        </button>
+        &nbsp;
+      <!--<a href="#!"><img class="logo" src="assets/img/Logo.jpg" style="block-size: initial;" /></a>-->
+        &nbsp;
+        <div style="font-weight: 500; font-family:Roboto, Helvetica, sans-serif;
+         color: ghostwhite ;font-size: larger;">
+            Cloud Racers Health Planner
+        </div>
+        <!--<div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="assets/img/Logo.jpg">
+            </a>
+          </div>-->
+        <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs *ngIf="logedUser != null">
+            <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+                <a mat-button routerLink="/home">Home</a>
+                <!--<a mat-button routerLink="/home">About Us</a>-->
+                <a mat-button   (click)="logout()">Logout</a>
+            </ul>
+        </div>
+        
+    </mat-toolbar-row>
+</mat-toolbar>

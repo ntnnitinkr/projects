@@ -1,0 +1,40 @@
+<section fxLayout="row wrap" fxLayoutAlign="center" style="color: darkgreen;font-family: Roboto, Helvetica Neue, sans-serif">
+    <div >
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 style="text-align: center;font-family: Roboto, Helvetica Neue, sans-serif">Get your Report Diagnosis here!!!</h2>  
+            <h3  style="text-align: center;font-family: Roboto, Helvetica Neue, sans-serif">Submit your report below </h3>  
+            <p style="text-align: center;font-family: Roboto, Helvetica Neue, sans-serif">Click Browse select file location and then click Submit</p>          
+            <section fxLayout="row wrap" fxLayoutAlign="center">
+            <div class="form-group">
+               <button mat-raised-button style="border-color: white; border-style: groove; background-color: darkcyan;font-family: Roboto, Helvetica Neue, sans-serif"> <input style="color: white; font-family: Roboto, Helvetica Neue, sans-serif" type="file" name="image" (change)="fileProgress($event.target.files)" /></button>
+            </div>
+            </section>
+            <div *ngIf="fileUploadProgress">
+                Upload progress: {{ fileUploadProgress }}
+            </div>
+            <div><br></div>
+            <div class="image-preview mb-3" style="text-align: center; align-items: center;align-content: center;align-content: center;" *ngIf="previewUrl">
+                <img style="text-align: center; align-items: center;align-content: center;align-content: center;" [src]="previewUrl" height="300"  />                 
+            </div>
+            <div><br></div>
+            <div style="text-shadow: cyan; font-family: Roboto, Helvetica Neue, sans-serif;font-size: large; border-color: white; border-style: groove; color:#00203FFF ;text-align:center ; background-color: #ADEFD1FF ; border-radius: 0.01cm;" class="mb-3" *ngIf="uploadedFilePath">
+                <b>{{uploadedFilePath}}</b>
+            </div>
+       
+             <div><br></div>
+           
+        </div>
+    </div>
+
+    
+</div>
+</div>
+</section>
+
+<section fxLayout="row wrap" fxLayoutAlign="center">
+    <div class="form-group" >
+        <button mat-raised-button style="background-color: #F0C300;color: black;"  (click)="onSubmit()"><b>SUBMIT</b></button>
+    </div>
+</section>

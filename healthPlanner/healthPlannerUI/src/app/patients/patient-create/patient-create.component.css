@@ -1,0 +1,114 @@
+mat-form-field {
+  width: 350px;
+}
+
+mat-card-title {
+  text-align: center;
+}
+
+.mat-hint-style {
+  font-size: 75%;
+  font-weight: 400;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: darkslategray;
+}
+
+.star{
+  color:darkslategray;
+  font-size: 150%;
+  }
+
+  mat-card-content{
+    color:darkcyan; 
+  }
+
+  .app_button_action {
+    background-color: #F0C300;
+    color: black;
+    font-family: Roboto, Helvetica Neue, sans-serif;
+}
+
+
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible {
+  background-color: cadetblue;
+  color: ghostwhite;
+  cursor: pointer;
+  padding: 18px;
+  width: 90%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: cadetblue;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  background-color: darkcyan;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  } 
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+  }
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.mat-form-field--inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mat-form-field--inline .mat-form-field {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.mat-form-field--inline .mat-form-field:nth-child(1) {
+  margin-right: 10px;
+}
+
+.container{
+  width: 100%;
+  padding-right: 5cm;
+  margin-top: 20px;
+}
+
+#map {
+  height: 100%;
+}
+
+.tp-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.tp-full-width {
+  width: 100%;
+}
+
+
+.tp-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 20px;
+  padding-left: 0.5ch;
+}
