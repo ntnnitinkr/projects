@@ -1,0 +1,127 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "description": "REST API for Health Advisor Application",
+    "version": "1.0.0",
+    "title": "Health Advisor API",
+    "license": {
+      "name": "IBM",
+      "url": "http://www.ibm.com"
+    }
+  },
+  "paths": {
+    "/covid/get": {
+      "get": {
+        "tags": [
+          "Covid Queries"
+        ],
+        "summary": "Returns all covid data",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/covid"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "covid": {
+        "type": "object",
+        "properties": {
+            "updated": {
+              "type": "string",
+              "format": "number"
+            },
+            "country": {
+              "type": "string",
+              "format": "string"
+            },
+            "countryInfo": {
+              "$ref": "#/components/schemas/countryInfo"
+            },
+            "cases": {
+              "type": "string",
+              "format": "number"
+            },
+            "todayCases": {
+              "type": "string",
+              "format": "number"
+            },
+            "deaths": {
+              "type": "string",
+              "format": "number"
+            },
+            "todayDeaths": {
+              "type": "string",
+              "format": "number"
+            },
+            "recovered": {
+              "type": "string",
+              "format": "number"
+            },
+            "active": {
+              "type": "string",
+              "format": "number"
+            },
+            "critical": {
+              "type": "string",
+              "format": "number"
+            },
+            "casesPerOneMillion": {
+              "type": "string",
+              "format": "number"
+            },
+            "deathsPerOneMillion": {
+              "type": "string",
+              "format": "number"
+            },
+            "tests": {
+              "type": "string",
+              "format": "number"
+            },
+            "testsPerOneMillion": {
+              "type": "string",
+              "format": "number"
+            },
+            "continent": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        },
+        "countryInfo": {
+          "type": "object",
+          "properties": {
+              "_id": {
+                "type": "string",
+                "format": "number"
+              },
+              "iso2": {
+                "type": "string",
+                "format": "string"
+              },
+              "iso3": {
+                "type": "string",
+                "format": "string"
+              },
+              "lat": {
+                "type": "string",
+                "format": "number"
+              },
+              "long": {
+                "type": "string",
+                "format": "number"
+              },
+              "flag": {
+                "type": "string",
+                "format": "string"
+              }
+            }
+        }
+    }
+  }
+}
