@@ -1,0 +1,400 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "description": "REST API for Health Advisor Application",
+    "version": "1.0.0",
+    "title": "Health Advisor API",
+    "license": {
+      "name": "IBM",
+      "url": "http://www.ibm.com"
+    }
+  },
+  "paths": {
+    "/auth/get": {
+      "get": {
+        "tags": [
+          "User Queries"
+        ],
+        "summary": "Returns all users",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/user"
+            }
+          }
+        }
+      }
+    },
+    "/auth/create": {
+      "post": {
+        "tags": [
+          "User Queries"
+        ],
+        "summary": "Creates a new user",
+        "requestBody": {
+          "description": "User Authentication",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          },
+          "404": {
+            "description": "Failed. User already exists."
+          }
+        }
+      }
+    },
+    "/user/get": {
+      "get": {
+        "tags": [
+          "Patient Queries"
+        ],
+        "summary": "Returns all patients",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/patient"
+            }
+          }
+        }
+      }
+    },
+    "/user/create": {
+      "post": {
+        "tags": [
+          "Patient Queries"
+        ],
+        "summary": "Creates a new patient",
+        "requestBody": {
+          "description": "Patient Details",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/patient"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          },
+          "404": {
+            "description": "Failed. Patient already exists."
+          }
+        }
+      }
+    },
+    "/user/get/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of the patient that we want to match",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Patient Queries"
+        ],
+        "summary": "Rerieves patient record, provided a valid ID",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Patient ID",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/patient"
+            }
+          },
+          "400": {
+            "description": "Failed. Misunderstood Request."
+          },
+          "404": {
+            "description": "Failed. Patient not found."
+          }
+        }
+      }
+    },
+    "/user/update/{id}": {
+      "put": {
+        "summary": "Edits a patient record, provided a valid ID and data",
+        "tags": [
+          "Patient Queries"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Patient ID",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Patient Request Object",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/patient"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/patient"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/user/delete/{id}": {
+      "delete": {
+        "summary": "Delete a patient record, provided a valid ID",
+        "tags": [
+          "Patient Queries"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Patient ID",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          },
+          "400": {
+            "description": "Failed. Misunderstood Request."
+          },
+          "404": {
+            "description": "Failed. Patient Request not found."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "id": {
+        "properties": {
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "user": {
+        "type": "object",
+        "properties": {
+            "id": {
+              "type": "string",
+              "format": "string"
+            },
+            "username": {
+              "type": "string",
+              "format": "string"
+            },
+            "password": {
+              "type": "string",
+              "format": "password"
+            },
+            "isAuthenticated": {
+              "type": "string",
+              "format": "string"
+            },
+            "canAccessPatients": {
+              "type": "string",
+              "format": "string"
+            },
+          }
+        },
+      "patient": {
+        "type": "object",
+        "properties": {
+            "id": {
+              "type": "string",
+              "format": "string"
+            },
+            "patientName": {
+              "$ref": "#/components/schemas/patientname"
+            },
+            "gender": {
+              "type": "string",
+              "format": "string"
+            },
+            "dateOfBirth": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "mailId": {
+              "type": "string",
+              "format": "email"
+            },
+            "maritalStatus": {
+              "type": "string",
+              "format": "string"
+            },
+            "medHistory": {
+              "$ref": "#/components/schemas/medHistory"
+            },
+            "phone": {
+              "type": "string",
+              "format": "string"
+            },
+            "postalAddress": {
+              "$ref": "#/components/schemas/postalAddress"
+            },
+            "activity": {
+              "type": "string",
+              "format": "string"
+            },
+            "tobacoUse": {
+              "type": "string",
+              "format": "string"
+            },
+            "alchoholUse": {
+              "type": "string",
+              "format": "string"
+            },
+            "caffineUse": {
+              "type": "string",
+              "format": "string"
+            },
+            "allergies": {
+              "type": "string",
+              "format": "string"
+            },
+            "allergicFrom": {
+              "$ref": "#/components/schemas/allergicFrom"
+            },
+            "diet": {
+              "type": "string",
+              "format": "string"
+            },
+            "height": {
+              "type": "string",
+              "format": "string"
+            },
+            "weight": {
+              "type": "string",
+              "format": "string"
+            },
+            "bmi": {
+              "type": "string",
+              "format": "string"
+            }
+          }
+        },
+        "patientname": {
+          "type": "object",
+          "properties": {
+              "firstName": {
+                "type": "string",
+                "format": "string"
+              },
+              "lastName": {
+                "type": "string",
+                "format": "string"
+              }
+            }
+        },
+        "medHistory": {
+          "type": "array",
+          "items": {
+              "type": "string"
+            }
+        },
+        "postalAddress": {
+          "type": "object",
+          "properties": {
+              "city": {
+                "type": "string",
+                "format": "string"
+              },
+              "line1": {
+                "type": "string",
+                "format": "string"
+              },
+              "line2": {
+                "type": "string",
+                "format": "string"
+              },
+              "state": {
+                "type": "string",
+                "format": "string"
+              },
+              "zip": {
+                "type": "string",
+                "format": "string"
+              }
+          }
+        },
+        "allergicFrom": {
+          "type": "array",
+          "items": {
+              "type": "string"
+            }
+        }
+    }
+  }
+}
