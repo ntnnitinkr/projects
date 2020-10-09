@@ -37,7 +37,7 @@ import {AuthGuardService} from './security/authguard.service';
     MatAutocompleteModule,
     MatInputModule,
     AgmCoreModule.forRoot({
-      apiKey:'AIzaSyDcOpbwcY2rZg5ibtnIc_tzR0PgDkGWyM4'
+      apiKey:'*******************************'
     })
   ],
   providers: [
