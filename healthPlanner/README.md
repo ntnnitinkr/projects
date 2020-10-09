@@ -1,6 +1,20 @@
 # HealthPlanner
 ## Health Planner is a web application. It is built on top of Angular8 and React. Code is written in HTML, Typescript and Python.
 
+## **************Disclaimer*****************
+This application is part of RedHatHackathonPlus2020 which was conducted by IBM. I was a part of team of five members. Below were my responsibilities in building this project:
+1. To develop microservices using Python. (because I know Python programming language)
+2. To enhance the features of application like COVID data, Watson Services and Machine Learning. (because I have an experience in analytics/machine learning)
+3. To create navigation structure of whole UI. (because I can suggest very easily in building user-friendly app)
+4. To design theme so that application looks very attractive and impressive. (because I am a graphic designer and animator)
+Below is the demo of this application which was created by me. Please click on below video to see the demo.
+<p align="center">
+  <a href="https://drive.google.com/file/d/1-6Z4xW2q7a--uM8-ziXcY8xZ96tk5m29/view?usp=drivesdk">
+    <img src="https://github.com/ntnnitinkr/projects/blob/master/healthPlanner/assets/Screenshots/Video_Screenshot.png" width="300" title="Demo Video">
+  </a>
+</p>
+
+
 ### Features of this application are-
 1. Registration - This application is primary used by hospital staff as well as customers who would like to register for a treatment at a hospital. This application has the ability register the new customers by staff or used by the customer to self register themselves.
 2. List of Patients - In this application, hospital staff can view, update or delete patient details from list of patients. Hospital staff can see detailed history of their patients in this application. 
@@ -31,7 +45,7 @@ This application is deployed on Red Hat. So, we just need a link to access this 
   <img src="https://github.com/ntnnitinkr/projects/blob/master/healthPlanner/assets/Screenshots/Web_app_1.png" width="300" title="Login Page">
   <img src="https://github.com/ntnnitinkr/projects/blob/master/healthPlanner/assets/Screenshots/Web_app_2.png" width="300" title="Home Page">
   <img src="https://github.com/ntnnitinkr/projects/blob/master/healthPlanner/assets/Screenshots/Web_app_4.png" width="300" title="Fillup Details Page">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/healthPlanner/assets/Screenshots/Web_app_5.png" width="300" title="illup Details Page 2">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/healthPlanner/assets/Screenshots/Web_app_5.png" width="300" title="Fillup Details Page 2">
 </p>
 
 ## Patient List Page:
