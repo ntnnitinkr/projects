@@ -37,7 +37,7 @@ def xray_image():
     # Replace {version}, {apikey}, and {url} below
     visual_recognition = VisualRecognitionV3(
         version='2018-03-19',
-        iam_apikey='L-aitm6zbOv3xpB5_21m10tByNjzNLWcaX2yg1Jr4607'
+        iam_apikey='************************************'
     )
     classes = visual_recognition.classify(
         images_file,
