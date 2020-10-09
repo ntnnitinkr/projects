@@ -1,7 +1,7 @@
 # HealthPlanner
 ## Health Planner is a web application. It is built on top of Angular8 and React. Code is written in HTML, Typescript and Python.
 
-### **************Disclaimer*****************
+##############################################Disclaimer##############################################
 This application is part of RedHatHackathonPlus2020 which was conducted by IBM. I was a part of team of five members. Below were my responsibilities in building this project:
 1. To develop microservices using Python. (because I know Python programming language)
 2. To enhance the features of application like COVID data, Watson Services and Machine Learning. (because I have an experience in analytics/machine learning)
@@ -13,7 +13,7 @@ Below is the demo of this application which was created by me. Please click on b
     <img src="https://github.com/ntnnitinkr/projects/blob/master/healthPlanner/assets/Screenshots/Video_Screenshot.png" width="300" title="Demo Video">
   </a>
 </p>
-### ******************************************
+######################################################################################################
 
 ### Features of this application are-
 1. Registration - This application is primary used by hospital staff as well as customers who would like to register for a treatment at a hospital. This application has the ability register the new customers by staff or used by the customer to self register themselves.
