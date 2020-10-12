@@ -7,6 +7,7 @@ This application is part of RedHatHackathonPlus2020 which was conducted by IBM. 
 2. To enhance the features of application like COVID data, Watson Services and Machine Learning. (because I have an experience in analytics/machine learning)
 3. To create navigation structure of whole UI. (because I can suggest very easily in building user-friendly app)
 4. To design theme so that application looks very attractive and impressive. (because I am a graphic designer and animator)
+
 Below is the demo of this application which was created by me. Please click on below video to see the demo. <a href="https://github.com/ntnnitinkr/projects/blob/master/healthPlanner/assets/RedhatHackathon_CloudRacers_HealthPlanner_Implemention_v4.1.pptx">Click here</a> to see the presentation.
 <p align="center">
   <a href="https://drive.google.com/file/d/1-6Z4xW2q7a--uM8-ziXcY8xZ96tk5m29/view?usp=drivesdk">
