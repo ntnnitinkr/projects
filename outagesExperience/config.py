@@ -7,14 +7,14 @@
 #    'port': 3306
 
 # Please set the default DATABASE to retrieve batch codes for inital page (summary page)
-DEFAULT_DB = 'CCBDEV7'
+DEFAULT_DB = 'DBNAME1'
 
 DATABASE_1 = {
-    'host': 'lv01084.build.corp.oncor.com',
-    'dbname': 'CCBDEV7',
-    'user': 'cisadm27',
-    'password': 'cisadm27',
-    'port': 1725
+    'host': 'XXXX.XXXX.XXXX.XXXX',
+    'dbname': 'DBNAME1',
+    'user': 'XXXX',
+    'password': 'XXXX',
+    'port': 1111
 }
 
 DATABASE_2 = {
