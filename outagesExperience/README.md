@@ -1,6 +1,13 @@
 # OutageExperience
 ## Outage Experience is the Utility based on Dash which is Python framework for building web applications. It is built on top of Flask, Plotly.js, React and React Js. Code is written in python.
 
+### Click on below image for presentation-
+<p align="center">
+  <a href="https://github.com/ntnnitinkr/projects/blob/master/outagesExperience/Screenshots/Customer_Experience.pptx">
+    <img src="https://github.com/ntnnitinkr/projects/blob/master/outagesExperience/Screenshots/SlideShow.png" width="400" title="Outage Map Tab">
+  </a>
+</p>
+
 ### Features of this utility are-
 1. Analysis - Analyse the area where customers are unhappy and take required action
 2. Resolution for Unsatisfaction - Take the required steps in the area before loosing unsatisfied customer area
