@@ -31,15 +31,15 @@
 
 ## Outage Map 1:
 <p align="center">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/outagesExperience/Screenshots/Web_app_1.png" width="950" title="Outage Map Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/outagesExperience/Screenshots/SS_1.png" width="950" title="Outage Map Tab">
 </p>
 
 ## Outage Map 2:
 <p align="center">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/outagesExperience/Screenshots/Web_app_2.png" width="950" title="Outage Map Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/outagesExperience/Screenshots/SS_2.png" width="950" title="Outage Map Tab">
 </p>
 
 ## Outage Table Tab:
 <p align="center">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/outagesExperience/Screenshots/Web_app_3.png" width="950" title="Outage Table Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/outagesExperience/Screenshots/SS_3.png" width="950" title="Outage Table Tab">
 </p>
