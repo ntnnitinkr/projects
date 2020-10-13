@@ -33,7 +33,7 @@
 ## Graphic Animation Sample 2:
 <p align="center">
   <a href="https://drive.google.com/file/d/10kztvT3SX5muhmKaoWtOQ2wGUyJN4FmP/view?usp=sharing">
-      <img src="https://github.com/ntnnitinkr/projects/blob/master/videoSamples/Screenshots/Schoov_sample_2.png" width="350" title="Graphic Animation Sample 2">
+      <img src="https://github.com/ntnnitinkr/projects/blob/master/videoSamples/Screenshots/Schoov_sample__2.png" width="350" title="Graphic Animation Sample 2">
   </a>
 </p>
 
