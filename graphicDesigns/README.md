@@ -4,25 +4,36 @@
 ## Market Transactions Dashboard:
 <p align="center">
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/M360_dashboard_1.png" width="950" title="Market Transactions Dashboard 1">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/M360_dashboard_2.png" width="950" title="Market Transactions Dashboard 2">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/M360_dashboard_3.png" width="950" title="Market Transactions Dashboard 3">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/M360_dashboard_4.png" width="950" title="Market Transactions Dashboard 4">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/M360_dashboard_5.png" width="950" title="Market Transactions Dashboard 5">
 </p>
 
 ## Advertisements:
 <p align="center">
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Advertisement_1.png" width="950" title="Advertisement 1">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Advertisement_2.png" width="950" title="Advertisement 2">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Advertisement_3.png" width="950" title="Advertisement 3">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Advertisement_4.png" width="950" title="Advertisement 4">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Advertisement_5.png" width="950" title="Advertisement 5">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Advertisement_6.png" width="950" title="Advertisement 6">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Advertisement_7.png" width="950" title="Advertisement 7">
 </p>
 
 ## Cards:
 <p align="center">
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Card_sample_1.png" width="550" title="Card 1">
+  <br/><br/><br/>
   <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Card_sample_2.png" width="550" title="Card 2">
 </p>
