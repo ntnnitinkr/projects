@@ -32,8 +32,22 @@
 
 ## Graphic Animation Sample 2:
 <p align="center">
-  <a href="https://drive.google.com/file/d/1FuSoLmp-Sqqs697SB26VSNWOeOqFvgs6/view?usp=drivesdk">
+  <a href="https://drive.google.com/file/d/10kztvT3SX5muhmKaoWtOQ2wGUyJN4FmP/view?usp=sharing">
       <img src="https://github.com/ntnnitinkr/projects/blob/master/videoSamples/Screenshots/Schoov_sample_2.png" width="350" title="Graphic Animation Sample 2">
+  </a>
+</p>
+
+## Graphic Animation Sample 3:
+<p align="center">
+  <a href="https://drive.google.com/file/d/15d9Vb-JTOQXtTmhYwHKoMtMIIzfCdDYd/view?usp=sharing">
+      <img src="https://github.com/ntnnitinkr/projects/blob/master/videoSamples/Screenshots/Schoov_sample_3.png" width="350" title="Graphic Animation Sample 3">
+  </a>
+</p>
+
+## Graphic Animation Sample 4:
+<p align="center">
+  <a href="https://drive.google.com/file/d/1poRK6ihsNhBEK6dkdMPV6Yyz0P9f2NeF/view?usp=sharing">
+      <img src="https://github.com/ntnnitinkr/projects/blob/master/videoSamples/Screenshots/Schoov_sample_4.png" width="350" title="Graphic Animation Sample 4">
   </a>
 </p>
 
