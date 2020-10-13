@@ -23,6 +23,6 @@
 
 ## Cards:
 <p align="center">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Card_sample_1.png" width="950" title="Card 1">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Card_sample_2.png" width="950" title="Card 2">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Card_sample_1.png" width="550" title="Card 1">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/graphicDesigns/Card_sample_2.png" width="550" title="Card 2">
 </p>
