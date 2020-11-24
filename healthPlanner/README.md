@@ -2,7 +2,7 @@
 ## Health Planner is a web application. It is built on top of Angular8 and React. Code is written in HTML, Typescript and Python.
 
 ################################################**Disclaimer**################################################
-This application is part of RedHatHackathonPlus2020 which was conducted by IBM. I was a part of team of five members. Below were my responsibilities in building this project:
+This application is part of RedHatHackathonPlus2020 which was conducted by IBM. It was conducted at Asia Pacific level. I was a part of team of five members. Below were my responsibilities in building this project:
 1. To develop microservices using Python. (because I know Python programming language)
 2. To enhance the features of application like COVID data, Watson Services and Machine Learning. (because I have an experience in analytics/machine learning)
 3. To create navigation structure of whole UI. (because I can suggest very easily in building user-friendly app)
@@ -12,6 +12,12 @@ Below is the demo of this application which was created by me. Please click on b
 <p align="center">
   <a href="https://drive.google.com/file/d/1-6Z4xW2q7a--uM8-ziXcY8xZ96tk5m29/view?usp=drivesdk">
     <img src="https://github.com/ntnnitinkr/projects/blob/master/healthPlanner/assets/Screenshots/Video_Screenshot.png" width="300" title="Demo Video">
+  </a>
+</p>
+In this hackathon, we secured 2nd position from 400+ teams. Below is the certificate we got for appreciation:
+<p align="center">
+  <a href="https://github.com/ntnnitinkr/courses-certifications/blob/master/Other-badges-and-certifications/HackathonCertificate_CloudRacers.pdf">
+    <img src="https://github.com/ntnnitinkr/courses-certifications/blob/master/Other-badges-and-certifications/HackathonCertificate_CloudRacers.png" width="500" title="Demo Video">
   </a>
 </p>
 ######################################################################################################
