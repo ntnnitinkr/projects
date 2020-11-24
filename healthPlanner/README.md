@@ -14,7 +14,8 @@ Below is the demo of this application which was created by me. Please click on b
     <img src="https://github.com/ntnnitinkr/projects/blob/master/healthPlanner/assets/Screenshots/Video_Screenshot.png" width="300" title="Demo Video">
   </a>
 </p>
-In this hackathon, we secured 2nd position from 400+ teams. Below is the certificate we got for appreciation:
+In this hackathon, we secured 2nd position from 400+ teams. Below is the certificate of appreciation we got:
+<p></p>
 <p align="center">
   <a href="https://github.com/ntnnitinkr/courses-certifications/blob/master/Other-badges-and-certifications/HackathonCertificate_CloudRacers.pdf">
     <img src="https://github.com/ntnnitinkr/courses-certifications/blob/master/Other-badges-and-certifications/HackathonCertificate_CloudRacers.png" width="500" title="Demo Video">
