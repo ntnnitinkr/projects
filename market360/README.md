@@ -45,4 +45,37 @@
   <img src="https://github.com/ntnnitinkr/projects/blob/master/market360/Screenshots/M360_1.png" width="950" title="Login Screen">
 </p>
 
+## Inbound Dashboard:
+<p align="center">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/market360/Screenshots/M360_2.png" width="950" title="Inbound Dashboard">
+</p>
 
+## Outbound Dashboard:
+<p align="center">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/market360/Screenshots/M360_3.png" width="950" title="Outbound Dashboard">
+</p>
+
+## Transaction Monitoring:
+<p align="center">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/market360/Screenshots/M360_4.png" width="950" title="Transaction Monitoring">
+</p>
+
+## Unprocessed Priority Reconnect:
+<p align="center">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/market360/Screenshots/M360_5.png" width="950" title="Unprocessed Priority Reconnect">
+</p>
+
+## Inbound Unprocessed Transactions:
+<p align="center">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/market360/Screenshots/M360_6.png" width="950" title="Inbound Unprocessed Transactions">
+</p>
+
+## Outbound Unprocessed Transactions:
+<p align="center">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/market360/Screenshots/M360_7.png" width="950" title="Outbound Unprocessed Transactions">
+</p>
+
+## Navigation:
+<p align="center">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/market360/Screenshots/M360_8.png" width="950" title="Navigation">
+</p>
