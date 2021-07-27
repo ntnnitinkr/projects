@@ -4,4 +4,3 @@ dash_gif_component==1.1.0
 requests==2.22.0
 configparser==5.0.2
 visdcc==0.0.40
-dash-auth==1.4.1 
