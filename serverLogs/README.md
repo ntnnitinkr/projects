@@ -15,25 +15,25 @@
 
 ## Home Page:
 <p align="center">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/serverLogs/Screenshots/Home.png" width="950" title="Summary Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/serverLogs/Screenshots/Home.png" width="950" title="Home Page">
 </p>
 
 ## Home Page:
 <p align="center">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/serverLogs/Screenshots/Home_2.png" width="950" title="Summary Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/serverLogs/Screenshots/Home_2.png" width="950" title="Home Page">
 </p>
 
 ## Login Page:
 <p align="center">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/serverLogs/Screenshots/Login.png" width="950" title="Summary Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/serverLogs/Screenshots/Login.png" width="950" title="Login Page">
 </p>
 
 ## Manage Servers Page:
 <p align="center">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/serverLogs/Screenshots/Manage_servers.png" width="950" title="Summary Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/serverLogs/Screenshots/Manage_servers.png" width="950" title="Manage Servers Page">
 </p>
 
 ## Error List Page:
 <p align="center">
-  <img src="https://github.com/ntnnitinkr/projects/blob/master/serverLogs/Screenshots/Error_list.png" width="950" title="Summary Tab">
+  <img src="https://github.com/ntnnitinkr/projects/blob/master/serverLogs/Screenshots/Error_list.png" width="950" title="Error List Page">
 </p>
